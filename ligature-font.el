@@ -10,7 +10,7 @@
 ;;; Code:
 
 (eval-when-compile
-  (require 'cl))
+  (require 'cl-lib))
 (require 'dash)
 
 (defvar-local ligature-font-char-list nil)
@@ -76,7 +76,7 @@ replaced with a glyph while `ligature-font-mode' is active.  See also
         ("$" t)                         ; use alternate $
         ("/=" "!=")                     ; "not equal" is /=
         ("!=" nil)                      ; != is not special
-        (t default-enabled)))
+        (_ default-enabled)))
      (t default-enabled))))
 
 (defun ligature-font--default-compose-predicate

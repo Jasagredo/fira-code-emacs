@@ -9,7 +9,7 @@
 (require 'ligature-font)
 
 (eval-when-compile
-  (require 'cl))
+  (require 'cl-lib))
 (require 'dash)
 
 (load "fira-code-data")
